@@ -1,3 +1,93 @@
+:root { /*<html>*/
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+#root { /*React's equivalent to <body>*/
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  background-color:burlywood;
+}
+
+div.full-page {
+  background-color: antiquewhite;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+p {
+  color:blueviolet;
+}
+a {
+  color:aqua !important;
+}
+a:hover {
+  color:crimson !important;
+}
+
+
+/* NAVBAR */
+#nav-container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.navbar-collapse.collapsing {
+    height: 100vh;
+}
+.navbar-listgroup .list-group-item {
+  background-color: inherit;
+  border: 0px;
+  /*border-top: 1px solid #0091b5;
+  border-left-color: #fff;
+  border-right-color: #fff;*/
+}
+.navbar-buttongroup .list-group-item {
+  background-color: inherit;
+  border: 0px;
+}
+div.side-borders {
+  border-left: 1px solid #0091b5;
+  border-right: 1px solid #0091b5;
+}
+
+/* HOME PAGE */
+#home {
+  background-color:cornflowerblue;
+  padding: 1rem;
+  
+}
+#about {
+  padding-top: 5rem;
+}
+
+
+/* DARK MODES --------------------------*/
+.dark-mode {
+  background-color:black !important;
+}
+.dark-mode div.full-page {
+  background-color:rgb(32, 47, 32);
+}
+.dark-mode p {
+  color:antiquewhite;
+}
+.dark-mode #home {
+  background-color: green;
+}
+
+
+
+/*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,3 +156,26 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/
+
+/*
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+*/
