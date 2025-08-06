@@ -14,8 +14,8 @@ export default function SiteNavbar(props) {
         element.classList.toggle("dark-mode");
     }
 
-    return <Navbar id="portfolio-navbar" bg="dark" variant="dark" fixed="top" expand="md" collapseOnSelect>
-        <Container id="nav-container">
+    return <Navbar id="portfolio-navbar" fixed="top" expand="md" collapseOnSelect>
+        <Container id="nav-container" >
             <Navbar.Brand smooth as={HashLink} to="/#top">
                 <img
                     alt="crow emoji"
@@ -28,24 +28,43 @@ export default function SiteNavbar(props) {
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" >
-                
-                <ListGroup className="navbar-listgroup ms-auto" horizontal>
-                    <ListGroup.Item><HashLink smooth to='/#about' style={{textDecoration:"none"}}>About</HashLink></ListGroup.Item>
-                    <ListGroup.Item><Nav.Link as={Link} to="/programming">Projects</Nav.Link></ListGroup.Item>
-                    <ListGroup.Item><Nav.Link as={Link} to="/linguistics">Research</Nav.Link></ListGroup.Item>
-                </ListGroup>
 
-                <div className="side-borders">
-                    <ListGroup className="navbar-buttongroup" horizontal>
-                        <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank"><FaLinkedin/></a></ListGroup.Item>
-                        <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank"><FaGithub/></a></ListGroup.Item>
-                        <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></a></ListGroup.Item>
-                    </ListGroup>
-                </div>
-            
-                <a onClick={handleColorMode} style={{marginLeft:"1rem"}}>
-                    {colorMode ? <FaSun/> : <FaMoon/>}
-                </a>
+                <Nav id="tabs" className="ms-auto justify-content-center">
+                    <Nav.Link as={HashLink} smooth to='/#about' style={{textDecoration:"none"}}>About</Nav.Link>
+                    <Nav.Link as={Link} to="/programming">Projects</Nav.Link>
+                    <Nav.Link as={Link} to="/linguistics">Research</Nav.Link>
+                </Nav>
+
+                <Nav className="d-flex justify-content-center" horizontal>
+                    <Navbar.Text>
+                        <ListGroup id="icons" className="d-flex justify-content-center" horizontal>
+                            <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank"><FaLinkedin/></a></ListGroup.Item>
+                            <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank"><FaGithub/></a></ListGroup.Item>
+                            <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></a></ListGroup.Item>
+                            <ListGroup.Item><a></a></ListGroup.Item>
+                        </ListGroup>
+                    </Navbar.Text>
+                    <Navbar.Text >
+                        <a onClick={handleColorMode} id="color-toggle">
+                            {colorMode ? <FaSun/> : <FaMoon/>}
+                        </a>
+                    </Navbar.Text>
+
+                </Nav>
+
+                {/*<ListGroup id="icons" className="d-flex justify-content-center" horizontal>
+                    
+                    <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank"><FaLinkedin/></a></ListGroup.Item>
+                    <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank"><FaGithub/></a></ListGroup.Item>
+                    <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></a></ListGroup.Item>
+                    <ListGroup.Item cstyle={{paddingLeft:".5rem", paddingRight:".5rem"}}><a></a></ListGroup.Item>  
+                    <ListGroup.Item >
+                        <a onClick={handleColorMode} id="color-toggle">
+                            {colorMode ? <FaSun/> : <FaMoon/>}
+                        </a>
+                    </ListGroup.Item>
+
+                </ListGroup>*/}
 
             </Navbar.Collapse>
             

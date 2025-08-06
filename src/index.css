@@ -16,73 +16,96 @@
   padding: 2rem;
   text-align: center;
 
-  background-color:burlywood;
+  background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);
 }
 
 div.full-page {
-  background-color: antiquewhite;
+  /*background-color: #FFFDD0;*/
   margin-top: 2rem;
   padding-top: 2rem;
 }
 
 p {
-  color:blueviolet;
+  color:#C2257B;
 }
 a {
-  color:aqua !important;
+  color: #DB4D9C !important;
 }
 a:hover {
-  color:crimson !important;
+  color: #F0BD75 !important;
 }
 
 
 /* NAVBAR */
-#nav-container {
-  padding-left: 5rem;
-  padding-right: 5rem;
+#portfolio-navbar{
+  background-color:#FFFDD0;
 }
-.navbar-collapse.collapsing {
-    height: 100vh;
+.navbar-toggle {
+  border: 0px
 }
-.navbar-listgroup .list-group-item {
+#tabs {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#tabs .nav-link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#icons .list-group-item {
   background-color: inherit;
   border: 0px;
-  /*border-top: 1px solid #0091b5;
-  border-left-color: #fff;
-  border-right-color: #fff;*/
+  /*padding-left: 1rem;
+  padding-right: 1rem;*/
+  font-size: 1.6em;
+  line-height: .8em;
 }
-.navbar-buttongroup .list-group-item {
-  background-color: inherit;
-  border: 0px;
+#color-toggle {
+  font-size: 1.6em;
+  margin-right: 2rem;
+  /*line-height: .8em;*/
 }
-div.side-borders {
-  border-left: 1px solid #0091b5;
-  border-right: 1px solid #0091b5;
-}
+
 
 /* HOME PAGE */
 #home {
-  background-color:cornflowerblue;
+  background-color:rgb(237, 230, 206);
   padding: 1rem;
   
 }
 #about {
   padding-top: 5rem;
 }
+div.card {
+  background-color: #FFFDD0;
+}
 
 
 /* DARK MODES --------------------------*/
 .dark-mode {
-  background-color:black !important;
+  /*background-color:black !important;*/
+  background-image: linear-gradient(#171D30, #702674) !important;
 }
 .dark-mode div.full-page {
-  background-color:rgb(32, 47, 32);
+  background-color: #171D30;
 }
 .dark-mode p {
-  color:antiquewhite;
+  color:#FFE991;
+}
+.dark-mode a {
+  color: #EEC63D !important;
+}
+.dark-mode a:hover {
+  color: #DB4D9C !important;
+}
+.dark-mode #portfolio-navbar {
+  background-color: #171D30;
+
 }
 .dark-mode #home {
-  background-color: green;
+  background-color: #013466;
+}
+.dark-mode div.card {
+  background-color: #013466;
 }
 
 
