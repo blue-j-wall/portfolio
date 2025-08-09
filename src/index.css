@@ -20,7 +20,7 @@
 }
 
 div.full-page {
-  /*background-color: #FFFDD0;*/
+  border: .25rem solid #FFFDD0;
   margin-top: 2rem;
   padding-top: 2rem;
 }
@@ -40,6 +40,10 @@ a:hover {
 #portfolio-navbar{
   background-color:#FFFDD0;
 }
+#nav-container {
+  padding-left: 2rem; /*1rem by default*/
+  padding-right: 2rem; /*1rem by default*/
+}
 .navbar-toggle {
   border: 0px
 }
@@ -54,15 +58,12 @@ a:hover {
 #icons .list-group-item {
   background-color: inherit;
   border: 0px;
-  /*padding-left: 1rem;
-  padding-right: 1rem;*/
   font-size: 1.6em;
   line-height: .8em;
 }
 #color-toggle {
   font-size: 1.6em;
-  margin-right: 2rem;
-  /*line-height: .8em;*/
+  margin-left: 1rem; /*maybe should be 2rem?*/
 }
 
 

@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react'
-import { Container, Nav, Navbar, Form, Button, DropdownButton, Dropdown, ButtonGroup, ToggleButton, Image, ListGroup } from "react-bootstrap";
+import { Container, Nav, Navbar, Button, ButtonGroup, Image, ListGroup, Offcanvas } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
 import { GiTreeBranch } from "react-icons/gi";
@@ -26,47 +26,40 @@ export default function SiteNavbar(props) {
                 />{' '}
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav" >
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="ms-auto" />
 
+            {/*<Navbar.Collapse id="responsive-navbar-nav" > menu drops from navbar*/}
+            <Navbar.Offcanvas id={`offcanvasNavbar`} aria-labelledby={`offcanvasNavbarLabel`} placement="end" >
+            <Offcanvas.Header closeButton> <Offcanvas.Title></Offcanvas.Title> </Offcanvas.Header>
+            <Offcanvas.Body>
+            
                 <Nav id="tabs" className="ms-auto justify-content-center">
                     <Nav.Link as={HashLink} smooth to='/#about' style={{textDecoration:"none"}}>About</Nav.Link>
                     <Nav.Link as={Link} to="/programming">Projects</Nav.Link>
                     <Nav.Link as={Link} to="/linguistics">Research</Nav.Link>
+                    {/*<Nav.Link as={Link} to="https://www.linkedin.com/" target="_blank"><FaLinkedin/></Nav.Link>
+                    <Nav.Link as={Link} to="https://github.com/G-Wall" target="_blank"><FaGithub/></Nav.Link>
+                    <Nav.Link as={Link} to="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></Nav.Link>*/}
                 </Nav>
 
-                <Nav className="d-flex justify-content-center" horizontal>
-                    <Navbar.Text>
-                        <ListGroup id="icons" className="d-flex justify-content-center" horizontal>
+                <Nav className="d-flex justify-content-end" horizontal>
+                        <ListGroup id="icons" className="d-flex justify-content-start" horizontal>
                             <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank"><FaLinkedin/></a></ListGroup.Item>
                             <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank"><FaGithub/></a></ListGroup.Item>
                             <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></a></ListGroup.Item>
-                            <ListGroup.Item><a></a></ListGroup.Item>
                         </ListGroup>
-                    </Navbar.Text>
-                    <Navbar.Text >
-                        <a onClick={handleColorMode} id="color-toggle">
-                            {colorMode ? <FaSun/> : <FaMoon/>}
-                        </a>
-                    </Navbar.Text>
-
                 </Nav>
 
-                {/*<ListGroup id="icons" className="d-flex justify-content-center" horizontal>
-                    
-                    <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank"><FaLinkedin/></a></ListGroup.Item>
-                    <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank"><FaGithub/></a></ListGroup.Item>
-                    <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></a></ListGroup.Item>
-                    <ListGroup.Item cstyle={{paddingLeft:".5rem", paddingRight:".5rem"}}><a></a></ListGroup.Item>  
-                    <ListGroup.Item >
-                        <a onClick={handleColorMode} id="color-toggle">
-                            {colorMode ? <FaSun/> : <FaMoon/>}
-                        </a>
-                    </ListGroup.Item>
+            </Offcanvas.Body>
+            
+            </Navbar.Offcanvas>
+            {/*</Navbar.Collapse>*/}
 
-                </ListGroup>*/}
-
-            </Navbar.Collapse>
+            <Navbar.Text>
+                <a onClick={handleColorMode} id="color-toggle" className="d-flex align-items-center">
+                    {colorMode ? <FaSun/> : <FaMoon/>}
+                </a>
+            </Navbar.Text>
             
         </Container>
     </Navbar>
