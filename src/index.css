@@ -7,32 +7,36 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --text-blue: #0085d2;
+  --text-pink: #DB4D9C;
+  --text-yellow: #F0BD75;
 }
 
 
 #root { /*React's equivalent to <body>*/
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-
+  padding: 1rem;
+  
   background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);
 }
 
 div.full-page {
+  max-width: 1280px;
+  margin: auto;
   border: .25rem solid #FFFDD0;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 p {
-  color:#C2257B;
+  color: var(--text-blue); /* #DB4D9C #0085d2 */
 }
 a {
-  color: #DB4D9C !important;
+  color: var(--text-pink) !important;
+  cursor: pointer;
 }
 a:hover {
-  color: #F0BD75 !important;
+  color: var(--text-yellow) !important;
 }
 
 
@@ -44,8 +48,15 @@ a:hover {
   padding-left: 2rem; /*1rem by default*/
   padding-right: 2rem; /*1rem by default*/
 }
-.navbar-toggle {
-  border: 0px
+#toggle {
+  border: 0px;
+  color: var(--text-yellow);
+}
+#toggle .navbar-toggler-icon {
+  background-image: url("./assets/hamburger-light.svg");
+}
+#offcanvas {
+  background-color: #FFFEE0;
 }
 #tabs {
   margin-left: 2rem;
@@ -68,27 +79,38 @@ a:hover {
 
 
 /* HOME PAGE */
-#home {
-  background-color:rgb(237, 230, 206);
-  padding: 1rem;
-  
+#landing {
+  /*background-color:rgba(255,255,255,.25);*/
+  height: 90vh;
+  margin: 1rem;
+}
+#name {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--text-blue); 
+}
+#landing-text {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 3rem;
 }
 #about {
-  padding-top: 5rem;
+  background-color:rgba(255,255,255,.25);
+  height: 85vh;
+  margin: 1rem;
 }
-div.card {
-  background-color: #FFFDD0;
-}
+
 
 
 /* DARK MODES --------------------------*/
 .dark-mode {
-  /*background-color:black !important;*/
-  background-image: linear-gradient(#171D30, #702674) !important;
+  /*background-image: linear-gradient(#171D30, #702674) !important;*/
+  background-image: linear-gradient(#000918, #111643, #452670, #560b5a) !important;
 }
 .dark-mode div.full-page {
-  background-color: #171D30;
+  border: .25rem solid #000517;
 }
+
 .dark-mode p {
   color:#FFE991;
 }
@@ -96,17 +118,29 @@ div.card {
   color: #EEC63D !important;
 }
 .dark-mode a:hover {
-  color: #DB4D9C !important;
+  color: #1d2a5e !important;
 }
-.dark-mode #portfolio-navbar {
-  background-color: #171D30;
 
+.dark-mode #portfolio-navbar {
+  background-color: #000517; /*0b1122*/
 }
-.dark-mode #home {
-  background-color: #013466;
+.dark-mode #toggle {
+  border: 0px;
+  color: #DB4D9C;
 }
-.dark-mode div.card {
-  background-color: #013466;
+.dark-mode #toggle .navbar-toggler-icon {
+  background-image: url("./assets/hamburger-dark.svg");
+}
+
+
+.dark-mode #name {
+  color:#EEC63D;
+}
+.dark-mode #landing {
+  background-color: rgba(255,255,255,.05);
+}
+.dark-mode #about {
+  background-color: rgba(255,255,255,.05);
 }
 
 

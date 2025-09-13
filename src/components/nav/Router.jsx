@@ -10,6 +10,7 @@ export default function Router() {
         <Routes>
             <Route path="/" element={<Portfolio />}>
                 <Route index element={<Home />} />
+                <Route path="home" element={<Home />} />
                 <Route path="programming" element={<CompSci />} />
                 <Route path="linguistics" element={<Ling />} />
                 <Route path="*" element={<Home />} />

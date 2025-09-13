@@ -21,7 +21,7 @@ export default function SiteNavbar(props) {
 
     return <Navbar id="portfolio-navbar" fixed="top" expand="md" collapseOnSelect>
         <Container id="nav-container" >
-            <Navbar.Brand smooth as={HashLink} to="/#top">
+            <Navbar.Brand smooth as={HashLink} to="/home#">
                 <img
                     alt="crow emoji"
                     src="https://em-content.zobj.net/source/microsoft/407/black-bird_1f426-200d-2b1b.png"
@@ -33,12 +33,12 @@ export default function SiteNavbar(props) {
 
             <Navbar.Toggle id="toggle" aria-controls="responsive-navbar-nav" className="ms-auto" onClick={handleShowOffcanvas} />
 
-            <Navbar.Offcanvas id="offcanvasNavbar" placement="end" show={showOffcanvas} onHide={handleCloseOffcanvas}>
+            <Navbar.Offcanvas id="offcanvas" placement="end" show={showOffcanvas} onHide={handleCloseOffcanvas}>
                 <Offcanvas.Header closeButton> <Offcanvas.Title></Offcanvas.Title> </Offcanvas.Header>
                 <Offcanvas.Body>
                 
                     <Nav id="tabs" className="ms-auto justify-content-center">
-                        <Nav.Link as={HashLink} smooth to='/#about' style={{textDecoration:"none"}} onClick={handleCloseOffcanvas}>About</Nav.Link>
+                        <Nav.Link as={HashLink} smooth to='/home#about' style={{textDecoration:"none"}} onClick={handleCloseOffcanvas}>About</Nav.Link>
                         <Nav.Link as={Link} to="/programming" onClick={handleCloseOffcanvas}>Projects</Nav.Link>
                         <Nav.Link as={Link} to="/linguistics" onClick={handleCloseOffcanvas}>Research</Nav.Link>
                         {/*<Nav.Link as={Link} to="https://www.linkedin.com/" target="_blank"><FaLinkedin/></Nav.Link>
@@ -47,11 +47,11 @@ export default function SiteNavbar(props) {
                     </Nav>
 
                     <Nav className="d-flex justify-content-end" horizontal>
-                            <ListGroup id="icons" className="d-flex justify-content-start" horizontal>
-                                <ListGroup.Item ><a href="https://www.linkedin.com/" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin/></a></ListGroup.Item>
-                                <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub/></a></ListGroup.Item>
-                                <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope/></a></ListGroup.Item>
-                            </ListGroup>
+                        <ListGroup id="icons" className="d-flex justify-content-start" horizontal>
+                            <ListGroup.Item ><a href="https://www.linkedin.com/in/jamie-wall-02007b382" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin/></a></ListGroup.Item>
+                            <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub/></a></ListGroup.Item>
+                            <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope/></a></ListGroup.Item>
+                        </ListGroup>
                     </Nav>
 
                 </Offcanvas.Body>
