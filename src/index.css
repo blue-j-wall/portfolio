@@ -108,15 +108,14 @@ a:hover {
 
 /* HOME PAGE */
 #landing {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: 90vh;
   /*background-color:rgba(255,255,255,.25);*/
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 
-  /*color: #fffdf0;*/
   color: #25315a83;
 }
 #landing h1 {
@@ -128,9 +127,9 @@ a:hover {
 
   padding-top: clamp(3rem, 6vw, 4rem);
   padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  border-radius: 5rem;
+  padding-left: clamp(4rem, 4vw, 5rem);
+  padding-right: clamp(4rem, 4vw, 5rem);
+  border-radius: clamp(4rem, 4vw, 5rem);
   background-color: #ffffff32;
 
   /*border: 3px solid var(--pale-yellow);
@@ -146,13 +145,13 @@ a:hover {
   color: #fffdf0 !important;
 }
 #landing h2 {
-  padding: 2rem;
-  padding-bottom: 1rem;
-  font-size: clamp(2rem, 3vw, 3rem);
+  margin-top: clamp(0.5rem, 2vh, 1rem);
+  margin-bottom: clamp(0.5rem, 2vh, 1rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   font-family: alteHaasGroteskBoldFont;
 }
 #landing p {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-family: alteHaasGroteskRegularFont;
 }
 /* about section -------------------------------- */
@@ -161,7 +160,7 @@ a:hover {
   margin-right: 5vw;
 
   padding: 2rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
 
   color: var(--pink);
   font-size: 1.5rem;
@@ -197,25 +196,24 @@ a:hover {
 
 /* DARK MODES --------------------------*/
 .dark-mode {
-  /*background-image: linear-gradient(#171D30, #702674) !important;*/
-  background-image: linear-gradient(#000918, #111643, #452670, #560b5a) !important;
+  /*background-image: linear-gradient(#000918, #111643, #452670, #560b5a) !important;*/
+  /*background-image: linear-gradient(#131220, #0c0935, #0c2046, #281554, #43134d) !important;*/
+  background-image: linear-gradient(#474129, #000108, #00031A, #040323, #10002C, #1F0127) !important;
 }
 .dark-mode div.full-page {
-  border: .25rem solid var(--dm-black);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #fff0d033, #251c5e);
 }
 
-.dark-mode p {
-  color:#FFE991;
-}
 .dark-mode a {
-  color: var(--dm-yellow) !important;
+  color: #1f1466 !important; /*#1f1466*/
 }
 .dark-mode a:hover {
-  color: #1d2a5e !important;
+  color: var(--dm-yellow) !important;
 }
 
 .dark-mode #portfolio-navbar {
-  background-color: var(--dm-black); /*0b1122*/
+  background-color: #fff0d0; /*#fff0d0 #0b1122*/
 }
 .dark-mode #toggle {
   border: 0px;
@@ -227,31 +225,34 @@ a:hover {
 
 
 .dark-mode #landing h1 {
-  color:#fff4d5;
-  background-color: #00000032;
-  /*border: 3px solid#000517;*/
-  outline: 3px solid var(--dm-yellow);
+  color: #ffeec9 ; /*#fff0d0*/
+  background-color: #000000a9; 
+  outline: 3px solid #fff0d033; /*#fff0d033*/
 }
 .dark-mode #landing h2 {
-  outline-color: #1d2a5e;
-  color: #FFE991;
+  color: #ffe991ea; /*#FFE991*/
+}
+.dark-mode #landing p {
+  color: #ffe991cb; /*#FFE991*/
 }
 .dark-mode #landing a {
-  color: var(--dm-yellow) !important;
+  color: var(--dm-yellow) !important; /*var(--dm-yellow)*/
 }
 .dark-mode #landing a:hover {
   color: #1d2a5e !important;
 }
+
 .dark-mode #about {
-  --about-text: #d488f0; /*var(--dm-yellow) #8986e2 #ac88f0 */
+  --about-text: #ffffffd5; /*#ffffffd5*/
   color: var(--about-text);
 }
 .dark-mode #about p {
   color: var(--about-text);
 }
 .dark-mode .card.lang {
-  outline: 2px solid var(--about-text);
-  background-color: #00051779; /*#00051779  rgba(238, 141, 255, 0.178)*/
+  border: .5rem solid #1b104e;
+  outline: 0;
+  background-color: #00000000; /*#0e0545bf #00051779*/
   color: var(--about-text);
 }
 .dark-mode .card.lang p {
