@@ -1,3 +1,18 @@
+@font-face {
+  font-family: basillionFont;
+  src: url('./assets/basillion/Basillion.otf'),
+       url('./assets/basillion/Basillion.woff'),
+       url('./assets/basillion/Basillion.ttf'); 
+}
+@font-face {
+  font-family: alteHaasGroteskRegularFont;
+  src: url('./assets/alte_haas_grotesk/AlteHaasGroteskRegular.ttf');
+}
+@font-face {
+  font-family: alteHaasGroteskBoldFont;
+  src: url('./assets/alte_haas_grotesk/AlteHaasGroteskBold.ttf');
+}
+
 :root { /*<html>*/
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,9 +23,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --text-blue: #0085d2;
-  --text-pink: #DB4D9C;
-  --text-yellow: #F0BD75;
+  --blue: #0085d2;
+  --pink: #DB4D9C;
+  --yellow: #F0BD75;
+  --pale-yellow: #FFFDD0;
+
+  --dm-black: #000517;
+  --dm-yellow: #EEC63D;
 }
 
 
@@ -18,31 +37,40 @@
   margin: 0 auto;
   padding: 1rem;
   
-  background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);
+  background-color: #b3e2f4;
+  /*background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);*/
+  /*background-image: linear-gradient(#CDDFF7, #FFB4D1, #FFC8C8, #FFE2CB, #F6F2DF); https://www.schemecolor.com/sunrise-pastels.php*/
+  background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
+  /*background-image: linear-gradient(#7ea6dc, #88A4BD, #e1bed3, #f1bac0, #efe4bb);*/
+
+  /*
+  https://www.schemecolor.com/valley-sunrise.php
+  https://www.schemecolor.com/soft-sunrise.php
+  */
 }
 
 div.full-page {
   max-width: 1280px;
   margin: auto;
-  border: .25rem solid #FFFDD0;
+  border: .25rem solid var(--pale-yellow);
   margin-top: 2.5rem;
 }
 
 p {
-  color: var(--text-blue); /* #DB4D9C #0085d2 */
+  /*color: var(--blue); /* #DB4D9C #0085d2 */
 }
 a {
-  color: var(--text-pink) !important;
+  color: var(--pink) !important;
   cursor: pointer;
 }
 a:hover {
-  color: var(--text-yellow) !important;
+  color: var(--yellow) !important;
 }
 
 
 /* NAVBAR */
 #portfolio-navbar{
-  background-color:#FFFDD0;
+  background-color:var(--pale-yellow);
 }
 #nav-container {
   padding-left: 2rem; /*1rem by default*/
@@ -50,13 +78,13 @@ a:hover {
 }
 #toggle {
   border: 0px;
-  color: var(--text-yellow);
+  color: var(--yellow);
 }
 #toggle .navbar-toggler-icon {
   background-image: url("./assets/hamburger-light.svg");
 }
 #offcanvas {
-  background-color: #FFFEE0;
+  background-color: var(--pale-yellow);
 }
 #tabs {
   margin-left: 2rem;
@@ -80,24 +108,89 @@ a:hover {
 
 /* HOME PAGE */
 #landing {
-  /*background-color:rgba(255,255,255,.25);*/
+  padding-left: 3rem;
+  padding-right: 3rem;
   height: 90vh;
-  margin: 1rem;
-}
-#name {
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: var(--text-blue); 
-}
-#landing-text {
-  font-size: clamp(2rem, 3vw, 3rem);
+  /*background-color:rgba(255,255,255,.25);*/
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 3rem;
+  text-align: center;
+
+  /*color: #fffdf0;*/
+  color: #25315a83;
 }
+#landing h1 {
+  font-size: clamp(3.5rem, 8vw, 9rem);
+  font-family: basillionFont; 
+  /*color: #5bc0e4;*/
+  /*color: var(--pale-yellow);*/
+  color: #25315a;
+
+  padding-top: clamp(3rem, 6vw, 4rem);
+  padding-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 5rem;
+  background-color: #ffffff32;
+
+  /*border: 3px solid var(--pale-yellow);
+  outline: 3px solid var(--pink) ;*/
+  outline: 3px solid var(--pale-yellow);
+  outline-offset: -1rem;
+}
+#landing a {
+  /*color: var(--pale-yellow) !important;*/
+  color: #5c67a0 !important;
+}
+#landing a:hover {
+  color: #fffdf0 !important;
+}
+#landing h2 {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-family: alteHaasGroteskBoldFont;
+}
+#landing p {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-family: alteHaasGroteskRegularFont;
+}
+/* about section -------------------------------- */
 #about {
-  background-color:rgba(255,255,255,.25);
-  height: 85vh;
-  margin: 1rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  padding: 2rem;
+  padding-top: 3rem;
+
+  color: var(--pink);
+  font-size: 1.5rem;
+}
+#about p.cs {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+#about p.ling {
+  margin-top: 3rem;
+  margin-bottom: 5vh;
+}
+.card.lang {
+  width: clamp(7rem, 10vw, 8rem);
+  height: clamp(7rem, 10vw, 8rem);
+  margin: .5rem;
+
+  outline: 2px solid var(--pale-yellow);
+  outline-offset: -.5rem;
+  border-radius: 1rem;
+  border: 0;
+
+  background-color: #be01ae3e; /*rgba(238, 141, 255, 0.178)*/
+  color: var(--pale-yellow);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+.card.lang p {
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  margin: 0;
 }
 
 
@@ -108,21 +201,21 @@ a:hover {
   background-image: linear-gradient(#000918, #111643, #452670, #560b5a) !important;
 }
 .dark-mode div.full-page {
-  border: .25rem solid #000517;
+  border: .25rem solid var(--dm-black);
 }
 
 .dark-mode p {
   color:#FFE991;
 }
 .dark-mode a {
-  color: #EEC63D !important;
+  color: var(--dm-yellow) !important;
 }
 .dark-mode a:hover {
   color: #1d2a5e !important;
 }
 
 .dark-mode #portfolio-navbar {
-  background-color: #000517; /*0b1122*/
+  background-color: var(--dm-black); /*0b1122*/
 }
 .dark-mode #toggle {
   border: 0px;
@@ -133,14 +226,36 @@ a:hover {
 }
 
 
-.dark-mode #name {
-  color:#EEC63D;
+.dark-mode #landing h1 {
+  color:#fff4d5;
+  background-color: #00000032;
+  /*border: 3px solid#000517;*/
+  outline: 3px solid var(--dm-yellow);
 }
-.dark-mode #landing {
-  background-color: rgba(255,255,255,.05);
+.dark-mode #landing h2 {
+  outline-color: #1d2a5e;
+  color: #FFE991;
+}
+.dark-mode #landing a {
+  color: var(--dm-yellow) !important;
+}
+.dark-mode #landing a:hover {
+  color: #1d2a5e !important;
 }
 .dark-mode #about {
-  background-color: rgba(255,255,255,.05);
+  --about-text: #d488f0; /*var(--dm-yellow) #8986e2 #ac88f0 */
+  color: var(--about-text);
+}
+.dark-mode #about p {
+  color: var(--about-text);
+}
+.dark-mode .card.lang {
+  outline: 2px solid var(--about-text);
+  background-color: #00051779; /*#00051779  rgba(238, 141, 255, 0.178)*/
+  color: var(--about-text);
+}
+.dark-mode .card.lang p {
+  color: var(--about-text) !important;
 }
 
 

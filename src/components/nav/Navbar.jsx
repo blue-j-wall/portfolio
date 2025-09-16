@@ -46,7 +46,7 @@ export default function SiteNavbar(props) {
                         <Nav.Link as={Link} to="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></Nav.Link>*/}
                     </Nav>
 
-                    <Nav className="d-flex justify-content-end" horizontal>
+                    <Nav className="d-flex justify-content-end">
                         <ListGroup id="icons" className="d-flex justify-content-start" horizontal>
                             <ListGroup.Item ><a href="https://www.linkedin.com/in/jamie-wall-02007b382" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin/></a></ListGroup.Item>
                             <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub/></a></ListGroup.Item>
