@@ -39,8 +39,8 @@ export default function SiteNavbar(props) {
                 
                     <Nav id="tabs" className="ms-auto justify-content-center">
                         <Nav.Link as={HashLink} smooth to='/home#about' style={{textDecoration:"none"}} onClick={handleCloseOffcanvas}>About</Nav.Link>
-                        <Nav.Link as={Link} to="/programming" onClick={handleCloseOffcanvas}>Projects</Nav.Link>
-                        <Nav.Link as={Link} to="/linguistics" onClick={handleCloseOffcanvas}>Research</Nav.Link>
+                        <Nav.Link as={Link} to="/projects" onClick={handleCloseOffcanvas}>Projects</Nav.Link>
+                        <Nav.Link as={Link} to="/research" onClick={handleCloseOffcanvas}>Research</Nav.Link>
                         {/*<Nav.Link as={Link} to="https://www.linkedin.com/" target="_blank"><FaLinkedin/></Nav.Link>
                         <Nav.Link as={Link} to="https://github.com/G-Wall" target="_blank"><FaGithub/></Nav.Link>
                         <Nav.Link as={Link} to="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></Nav.Link>*/}

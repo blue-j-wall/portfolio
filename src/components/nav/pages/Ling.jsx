@@ -6,7 +6,5 @@ export default function Ling(props) {
         <p>PI Eric Raimy; here's the premise, did survey, working on the paper and results...</p>
         <h2>sociophonetics research</h2>
         <p>lit review for capstone</p>
-        <h2>interest in CAY</h2>
-        <p>interest in tense theory in general; did multiple papers, presentation...</p>
     </div>
 }

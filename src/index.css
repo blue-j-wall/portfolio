@@ -24,7 +24,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --blue: #0085d2;
-  --pink: #DB4D9C;
+  --pink: #d14190; /*#DB4D9C*/
   --yellow: #F0BD75;
   --pale-yellow: #FFFDD0;
 
@@ -39,9 +39,9 @@
   
   background-color: #b3e2f4;
   /*background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);*/
-  /*background-image: linear-gradient(#CDDFF7, #FFB4D1, #FFC8C8, #FFE2CB, #F6F2DF); https://www.schemecolor.com/sunrise-pastels.php*/
-  background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
+  /*background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
   /*background-image: linear-gradient(#7ea6dc, #88A4BD, #e1bed3, #f1bac0, #efe4bb);*/
+  background-image: linear-gradient(#619ee9, #b0c9ec, #ffd3ce, #FFD2B8, #ffe4b1);
 
   /*
   https://www.schemecolor.com/valley-sunrise.php
@@ -121,8 +121,6 @@ a:hover {
 #landing h1 {
   font-size: clamp(3.5rem, 8vw, 9rem);
   font-family: basillionFont; 
-  /*color: #5bc0e4;*/
-  /*color: var(--pale-yellow);*/
   color: #25315a;
 
   padding-top: clamp(3rem, 6vw, 4rem);
@@ -132,8 +130,6 @@ a:hover {
   border-radius: clamp(4rem, 4vw, 5rem);
   background-color: #ffffff32;
 
-  /*border: 3px solid var(--pale-yellow);
-  outline: 3px solid var(--pink) ;*/
   outline: 3px solid var(--pale-yellow);
   outline-offset: -1rem;
 }
