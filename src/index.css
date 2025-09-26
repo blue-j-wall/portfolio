@@ -22,69 +22,33 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --blue: #0085d2;
-  --pink: #d14190; /*#DB4D9C*/
-  --yellow: #F0BD75;
-  --pale-yellow: #FFFDD0;
-
-  --dm-black: #000517;
-  --dm-yellow: #EEC63D;
 }
 
 
 #root { /*React's equivalent to <body>*/
   margin: 0 auto;
   padding: 1rem;
-  
-  background-color: #b3e2f4;
-  /*background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);*/
-  /*background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
-  /*background-image: linear-gradient(#7ea6dc, #88A4BD, #e1bed3, #f1bac0, #efe4bb);*/
-  background-image: linear-gradient(#619ee9, #b0c9ec, #ffd3ce, #FFD2B8, #ffe4b1);
-
-  /*
-  https://www.schemecolor.com/valley-sunrise.php
-  https://www.schemecolor.com/soft-sunrise.php
-  */
 }
 
 div.full-page {
   max-width: 1280px;
   margin: auto;
-  border: .25rem solid var(--pale-yellow);
+  border-width: .25rem;
+  border-style: solid;
   margin-top: 2.5rem;
 }
 
-p {
-  /*color: var(--blue); /* #DB4D9C #0085d2 */
-}
 a {
-  color: var(--pink) !important;
   cursor: pointer;
 }
-a:hover {
-  color: var(--yellow) !important;
-}
-
 
 /* NAVBAR */
-#portfolio-navbar{
-  background-color:var(--pale-yellow);
-}
 #nav-container {
   padding-left: 2rem; /*1rem by default*/
   padding-right: 2rem; /*1rem by default*/
 }
 #toggle {
-  border: 0px;
-  color: var(--yellow);
-}
-#toggle .navbar-toggler-icon {
-  background-image: url("./assets/hamburger-light.svg");
-}
-#offcanvas {
-  background-color: var(--pale-yellow);
+  border-width: 0;
 }
 #tabs {
   margin-left: 2rem;
@@ -96,7 +60,7 @@ a:hover {
 }
 #icons .list-group-item {
   background-color: inherit;
-  border: 0px;
+  border-width: 0;
   font-size: 1.6em;
   line-height: .8em;
 }
@@ -111,34 +75,23 @@ a:hover {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 90vh;
-  /*background-color:rgba(255,255,255,.25);*/
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-
-  color: #25315a83;
 }
 #landing h1 {
   font-size: clamp(3.5rem, 8vw, 9rem);
   font-family: basillionFont; 
-  color: #25315a;
 
   padding-top: clamp(3rem, 6vw, 4rem);
   padding-bottom: 2rem;
   padding-left: clamp(4rem, 4vw, 5rem);
   padding-right: clamp(4rem, 4vw, 5rem);
   border-radius: clamp(4rem, 4vw, 5rem);
-  background-color: #ffffff32;
 
-  outline: 3px solid var(--pale-yellow);
+  outline-width: 3px;
+  outline-style: solid;
   outline-offset: -1rem;
-}
-#landing a {
-  /*color: var(--pale-yellow) !important;*/
-  color: #5c67a0 !important;
-}
-#landing a:hover {
-  color: #fffdf0 !important;
 }
 #landing h2 {
   margin-top: clamp(0.5rem, 2vh, 1rem);
@@ -150,7 +103,7 @@ a:hover {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-family: alteHaasGroteskRegularFont;
 }
-/* about section -------------------------------- */
+/* about section */
 #about {
   margin-left: 5vw;
   margin-right: 5vw;
@@ -158,7 +111,6 @@ a:hover {
   padding: 2rem;
   padding-top: 4rem;
 
-  color: var(--pink);
   font-size: 1.5rem;
 }
 #about p.cs {
@@ -174,18 +126,161 @@ a:hover {
   height: clamp(7rem, 10vw, 8rem);
   margin: .5rem;
 
-  outline: 2px solid var(--pale-yellow);
+  outline-width: 2px;
+  outline-style: solid;
   outline-offset: -.5rem;
   border-radius: 1rem;
-  border: 0;
+  border-width: 0;
 
-  background-color: #be01ae3e; /*rgba(238, 141, 255, 0.178)*/
-  color: var(--pale-yellow);
   font-size: clamp(2rem, 3vw, 3rem);
 }
 .card.lang p {
   font-size: clamp(0.5rem, 3vw, 1rem);
   margin: 0;
+}
+
+
+/* PROJECTS & RESEARCH PAGES */
+div.full-page.non-home h1 {
+  margin: 2rem;
+  margin-left: 2.5rem;
+}
+div.project {
+  margin: clamp(.5rem, 2vw, 2rem);
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  
+}
+div.project .card-body {
+  padding: 1.5rem;
+}
+div.project .body-text {
+  padding: 1rem;
+}
+
+/* PROJECTS PAGE */
+
+/* RESEARCH PAGE */
+#emoji-group {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#emoji-group img {
+  width: clamp(5rem, 20vw, 8rem);
+  
+}
+#larynx {
+  margin: 1rem;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+#larynx figure {
+  width: clamp(16rem, 30vw, 25rem);
+}
+
+
+
+
+
+
+/* COLORS ---------------------------------------------------------------------------- */
+:root { /*<html>*/
+  --blue: #0085d2;
+  --pink: #d14190; /*#DB4D9C*/
+  --yellow: #F0BD75;
+  --pale-yellow: #FFFDD0;
+
+  --dm-black: #000517;
+  --dm-yellow: #EEC63D;
+}
+
+
+#root { /*React's equivalent to <body>*/
+  background-color: #b3e2f4;
+  /*background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);*/
+  /*background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
+  /*background-image: linear-gradient(#7ea6dc, #88A4BD, #e1bed3, #f1bac0, #efe4bb);*/
+  background-image: linear-gradient(#619ee9, #b0c9ec, #ffd3ce, #FFD2B8, #ffe4b1);
+}
+
+div.full-page {
+  border-color: var(--pale-yellow);
+}
+
+p {
+  color: var(--blue);
+}
+a {
+  color: var(--pink) !important;
+}
+a:hover {
+  color: var(--yellow) !important;
+}
+
+/* NAVBAR */
+#portfolio-navbar{
+  background-color:var(--pale-yellow);
+}
+#toggle {
+  color: var(--yellow);
+}
+#toggle .navbar-toggler-icon {
+  background-image: url("./assets/hamburger-light.svg");
+}
+#offcanvas {
+  background-color: var(--pale-yellow);
+}
+
+/* HOME PAGE */
+#landing h1 {
+  color: #25315a;
+  background-color: #ffffff32;
+  outline-color: var(--pale-yellow);
+}
+#landing h2 {
+  color: #25315a83;
+}
+#landing p {
+  color: #25315a83;
+}
+#landing a {
+  color: #5c67a0 !important;
+}
+#landing a:hover {
+  color: #fffdf0 !important;
+}
+/* about section -------------------------------- */
+#about {
+  color: var(--pink);
+}
+#about p {
+  color: var(--pink);
+}
+.card.lang {
+  color: var(--pale-yellow);
+  background-color: #be01ae3e; /*rgba(238, 141, 255, 0.178)*/
+  outline-color: var(--pale-yellow);
+}
+.card.lang p {
+  color: var(--pale-yellow) !important;
+}
+
+/* PROJECTS/RESEARCH */
+h1 {
+  color: var(--pale-yellow) !important;
+}
+.full-page.non-home h2 {
+  color: rgb(198, 0, 115) !important;
+}
+div.project {
+  /*background-image: linear-gradient(#fffbe9db, #ffffff3d, #fffbe9db);*/
+  background-color: #fffbe989;
+  border-width: 0;
+}
+
+#larynx img {
+  filter: invert(0);
 }
 
 
@@ -201,6 +296,9 @@ a:hover {
   border-image-source: linear-gradient(to bottom, #fff0d033, #251c5e);
 }
 
+.dark-mode p {
+  color: #fff8eb;
+}
 .dark-mode a {
   color: #1f1466 !important; /*#1f1466*/
 }
@@ -212,7 +310,7 @@ a:hover {
   background-color: #fff0d0; /*#fff0d0 #0b1122*/
 }
 .dark-mode #toggle {
-  border: 0px;
+  border-width: 0;
   color: #DB4D9C;
 }
 .dark-mode #toggle .navbar-toggler-icon {
@@ -255,7 +353,26 @@ a:hover {
   color: var(--about-text) !important;
 }
 
+.dark-mode h1 {
+  color: #ffeec9 !important;
+}
+.dark-mode .full-page.non-home h2 {
+  color: rgb(202, 200, 225) !important;
+}
+.dark-mode div.project {
+  /*background-image: linear-gradient(#fffbe9db, #ffffff3d, #fffbe9db);*/
+  background-color: #10144989;
+}
 
+.dark-mode #larynx img {
+  filter: invert(1);
+}
+.dark-mode #larynx a {
+  color: rgb(202, 200, 225) !important;
+}
+.dark-mode #larynx a:hover {
+  color: #ffeec9 !important;
+}
 
 /*
 :root {

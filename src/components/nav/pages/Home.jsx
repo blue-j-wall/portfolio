@@ -37,7 +37,7 @@ export default function Home(props) {
             <ScrollFloat>About Me</ScrollFloat>
             <p className="cs">I'm an entry-level programmer with experience in both front-end and back-end development. The software stack I am familiar with is React for the frontend, 
                 JavaScript/Express for the backend, and SQLite for the database.<br/><br/> 
-                For things like data structures and algorithms, my oft-used programming language is Java. I prioritize general problem-solving ability as one my strengths for both
+                For things like data structures and algorithms, my most-preferred programming language is Java. I prioritize general problem-solving ability as one my strengths for both
                 computer science and linguistics as it lends flexibility to learning new material.
             </p>
             <div className="d-flex flex-wrap justify-content-center">{cards}</div>
