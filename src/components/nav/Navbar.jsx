@@ -7,12 +7,38 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function SiteNavbar(props) {
 
-    const [colorMode, setColorMode] = useState(1);
+    const [colorMode, setColorMode] = useState();
     const handleColorMode = () => {
-        setColorMode(1 - colorMode);
+
         var element = document.getElementById("root");
-        element.classList.toggle("dark-mode");
+
+        if(colorMode == "dark") {
+            element.classList.remove("dark-mode");
+            setColorMode("light");
+            localStorage.setItem('theme', "light");
+        }
+        else {
+            element.classList.add("dark-mode");
+            setColorMode("dark");
+            localStorage.setItem('theme', "dark");
+        } 
     }
+
+    useEffect(() => { // retrieve color theme from storage
+        let storedTheme = localStorage.getItem('theme');
+        var element = document.getElementById("root");
+        
+        if(!storedTheme) {
+            localStorage.setItem('theme', "light");
+            storedTheme = "light";
+        }
+
+        setColorMode(storedTheme);
+        if(storedTheme == "light")
+            element.classList.remove("dark-mode");
+        else
+            element.classList.add("dark-mode");
+    }, []);
 
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const handleCloseOffcanvas = () => setShowOffcanvas(false);
@@ -59,7 +85,7 @@ export default function SiteNavbar(props) {
             
             <Navbar.Text>
                 <a onClick={handleColorMode} id="color-toggle" className="d-flex align-items-center">
-                    {colorMode ? <FaSun/> : <FaMoon/>}
+                    {colorMode=="light" ? <FaSun/> : <FaMoon/>}
                 </a>
             </Navbar.Text>
             
