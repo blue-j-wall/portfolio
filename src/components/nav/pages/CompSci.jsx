@@ -1,20 +1,69 @@
+import { Image, Card } from 'react-bootstrap'
+
 export default function CompSci(props) {
 
     return <div className="full-page non-home">
-        <h1>CS page</h1>
-        <h2>Linguistics study app</h2>
-        <p>screenshots, embedded video; (Fall 2025); school project, final for "CS409 Mobile Systems"</p>
-        <p>!! use phrasing from poster !!</p>
-        <p>Participated in team of four to develop a study aid for linguistics students. (combining my fields, solving problem I had identified, etc)</p>
-        <p>Designed prototype and tested UX with target users. (pull specific term from UX notes)</p>
-        <p>Implemented quiz question flow and data loader after performing data wrangling process (describe data wrangling process; treebanks etc)</p>
-        <p>(teamwork; integrated code with teammates: Firebase login, UI state management, etc)</p>
+        <h1>My programming projects include...</h1>
 
-        <h2>Media archive</h2>
-        <p>(ongoing); personal project</p>
-        <p>Designed and developed responsive React frontend that allows users to easily see information on the movies, shows, etc they have added.
-            Coded Express backend that provides users the ability to search, add, remove, and edit entries in SQLite database</p>
-        <p>looking forward to adding more features</p>
+        <Card className="project">
+            <Card.Body>
+
+                <div className="body-text">
+                    <Card.Title>The Library</Card.Title>
+                    <Card.Subtitle>media archive website | personal project (ongoing)</Card.Subtitle>
+                </div>
+
+                <div className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-start">
+                    <div id="library-img-group" className="d-flex flex-column justify-content-center">
+                        <Image rounded src="src\assets\projects-media\library home.png"/>
+                        <Image rounded src="src\assets\projects-media\library movies.png"/>
+                    </div>
+                    <div className="body-text">
+                        <Card.Text>This project was originally conceptualized as a <strong>GUI for my 'media spreadsheets'</strong>. 
+                            They contain information on things I’ve read and watched, and they all go back years, making them quite annoying to search through. 
+                            This website makes it easier to look through the data for myself, and perhaps others in the future as well.</Card.Text>
+                        <Card.Text>I designed and developed a <strong>responsive React frontend</strong> that allows users to easily see information on the movies, shows, etc they have added.
+                            The backend uses <strong>Express.js</strong> and provides users the ability to search, add, remove, and edit entries in a <strong>SQLite database</strong>.</Card.Text>
+                        <Card.Text>I'm looking forward to using this project to experiment more in the future. For instance, I plan to add a feature that can automatically
+                            generate entries based off a link (eg. from IMDb), so that I can learn about and practice web scraping.</Card.Text>
+                        <Card.Text>A demo can be viewed <a>here</a>.</Card.Text>
+                    </div>
+                </div>
+            </Card.Body>
+        </Card>
+
+        <Card className="project">
+            <Card.Body className="d-flex flex-column ">
+                <div className="body-text">
+                    <Card.Title>Lingua</Card.Title>
+                    <Card.Subtitle>study app | final project for android development class (Fall 2025)</Card.Subtitle>
+                </div>
+
+                <div className="body-text">
+                    <Card.Text> Most low-level linguistics courses require memorization and understanding of complicated concepts such as syntax trees and the IPA chart. 
+                        However, many students find difficult to practice on their own, which I knew from personal experience.</Card.Text>
+                    <Card.Text> I participated in a <strong>team of four to develop an app</strong> that addresses this problem; it offers quizzes and interactive activites that help 
+                        linguistics students master introductory material. </Card.Text>
+                </div>
+
+                <div id="lingua-img-group" className="d-flex flex-row flex-xl-nowrap flex-wrap justify-content-center align-items-center">
+                    <Image rounded src="src\assets\projects-media\lingua screenshots.png"/>
+                    <Image rounded src="src/assets/projects-media/gum treebank example.png"/>
+                </div>
+
+                <div className="body-text">
+                    <Card.Text> My responsibilities were largely decided by my being the only team member with experience in linguistics.
+                        I personally <strong>designed the prototype and tested the UX</strong> with target users, and during the implementation process I was in charge of the data.
+                        After learning a lot about resources 
+                        like <a href="https://universaldependencies.org/#english-treebanks" target="_blank">treebanks</a> (shown above) 
+                        and <a href="https://github.com/CUNY-CL/wikipron/tree/master" target="_blank">WikiPron</a>
+                        , I did the <strong>data wrangling and programming for the dataloader</strong>. I worked 
+                        closely with my teammate tasked with the quizzes themselves to integrate our code.</Card.Text>
+                    <Card.Text> Other features of the app include Firebase authentication, drag & drop actions, vibration feedback, and notifications.</Card.Text>
+                    <Card.Text>A demo can be viewed <a>here</a>.</Card.Text>
+                </div>
+            </Card.Body>
+        </Card>
 
     </div>
 }
