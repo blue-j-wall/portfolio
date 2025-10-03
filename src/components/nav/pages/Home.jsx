@@ -1,7 +1,7 @@
 import { Card } from 'react-bootstrap'
-import { useEffect } from 'react';
 
 import { FaJava, FaPython, FaCss3Alt, FaReact, FaDatabase } from "react-icons/fa6";
+import { FaArrowAltCircleDown } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 
 import SplitText from '../../SplitText';
@@ -30,7 +30,8 @@ export default function Home(props) {
         <div id="landing" className="d-flex flex-column justify-content-center align-items-center">
             <SplitText text="Jamie Wall" tag="h1"/>
             <h2>entry-level programmer (and linguist)</h2>
-            <p>check out my <a>resume</a> or summary of what I'm interested in <a onClick={handleAboutClick}>below ↓</a></p>
+            <p>check out my <a href="https://docspace-9fcc69.onlyoffice.com/s/7Tmw2C_8ZT2PxwR" target="_blank">resume</a> or summary of what 
+                I'm interested in <a onClick={handleAboutClick}>below <FaArrowAltCircleDown/></a></p>
         </div>
         
         <div id="about">

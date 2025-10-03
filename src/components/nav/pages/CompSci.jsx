@@ -15,8 +15,8 @@ export default function CompSci(props) {
 
                 <div className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-start">
                     <div id="library-img-group" className="d-flex flex-column justify-content-center">
-                        <Image rounded src="src\assets\projects-media\library home.png"/>
-                        <Image rounded src="src\assets\projects-media\library movies.png"/>
+                        <Image rounded alt="home page" src="src\assets\projects-media\library home.png"/>
+                        <Image rounded alt="movie entries in card layout" src="src\assets\projects-media\library movies.png"/>
                     </div>
                     <div className="body-text">
                         <Card.Text>This project was originally conceptualized as a <strong>GUI for my 'media spreadsheets'</strong>. 
@@ -26,7 +26,7 @@ export default function CompSci(props) {
                             The backend uses <strong>Express.js</strong> and provides users the ability to search, add, remove, and edit entries in a <strong>SQLite database</strong>.</Card.Text>
                         <Card.Text>I'm looking forward to using this project to experiment more in the future. For instance, I plan to add a feature that can automatically
                             generate entries based off a link (eg. from IMDb), so that I can learn about and practice web scraping.</Card.Text>
-                        <Card.Text>A demo can be viewed <a>here</a>.</Card.Text>
+                        <Card.Text>A demo can be viewed <a href="https://youtu.be/9WWO99KPJAY" target="_blank">here</a>.</Card.Text>
                     </div>
                 </div>
             </Card.Body>
@@ -47,8 +47,8 @@ export default function CompSci(props) {
                 </div>
 
                 <div id="lingua-img-group" className="d-flex flex-row flex-xl-nowrap flex-wrap justify-content-center align-items-center">
-                    <Image rounded src="src\assets\projects-media\lingua screenshots.png"/>
-                    <Image rounded src="src/assets/projects-media/gum treebank example.png"/>
+                    <Image rounded alt="login, syntax quiz, and settings pages" src="src\assets\projects-media\lingua screenshots.png"/>
+                    <Image rounded alt="example from GUM treebank" src="src\assets\projects-media\gum treebank example.jpg"/>
                 </div>
 
                 <div className="body-text">
@@ -60,7 +60,7 @@ export default function CompSci(props) {
                         , I did the <strong>data wrangling and programming for the dataloader</strong>. I worked 
                         closely with my teammate tasked with the quizzes themselves to integrate our code.</Card.Text>
                     <Card.Text> Other features of the app include Firebase authentication, drag & drop actions, vibration feedback, and notifications.</Card.Text>
-                    <Card.Text>A demo can be viewed <a>here</a>.</Card.Text>
+                    <Card.Text>A demo can be viewed <a href="https://youtu.be/PJXH08NXyqY" target="_blank">here</a>.</Card.Text>
                 </div>
             </Card.Body>
         </Card>

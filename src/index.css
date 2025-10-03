@@ -12,6 +12,11 @@
   font-family: alteHaasGroteskBoldFont;
   src: url('./assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf');
 }
+@font-face {
+  font-family: bebasFont;
+  src: url('./assets/fonts/bebas/Bebas-Regular.otf'),
+       url('./assets/fonts/bebas/Bebas-Regular.ttf'); 
+}
 
 :root { /*<html>*/
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -145,6 +150,7 @@ a {
 div.full-page.non-home h1 {
   margin: 2rem;
   margin-left: 2.5rem;
+  font-family: bebasFont;
 }
 div.project {
   margin: clamp(.5rem, 2vw, 2rem);
@@ -158,9 +164,11 @@ div.project .card-body {
 div.project .card-title {
   margin-bottom: 1rem;
   font-size: 2rem;
+  font-family: bebasFont;
 }
 div.project .card-subtitle {
   font-size: 1.2rem;
+  font-family: bebasFont;
 }
 div.project .body-text {
   padding: 1rem;
@@ -208,20 +216,20 @@ div.project .body-text {
 /* COLORS ---------------------------------------------------------------------------- */
 :root { /*<html>*/
   --blue: #0085d2;
-  --pink: #d14190; /*#DB4D9C*/
+  --pink: #d14190; 
+  --darker-pink: rgb(198, 0, 115);
   --yellow: #F0BD75;
   --pale-yellow: #FFFDD0;
 
-  --dm-black: #000517;
   --dm-yellow: #EEC63D;
+  --dm-navy: #1f1466;
+  --dm-pale-yellow: #ffeec9; 
+  --dm-white: rgb(210, 220, 244);
 }
 
 
 #root { /*React's equivalent to <body>*/
   background-color: #b3e2f4;
-  /*background-image: linear-gradient(#87CEEB, #FADADD, #FDFD96);*/
-  /*background-image: linear-gradient(#9187B0, #9DADC9, #FFBFB8, #FFD2B8, #FFECCF);/* https://www.schemecolor.com/pastels-at-sunrise.php*/
-  /*background-image: linear-gradient(#7ea6dc, #88A4BD, #e1bed3, #f1bac0, #efe4bb);*/
   background-image: linear-gradient(#619ee9, #b0c9ec, #ffd3ce, #FFD2B8, #ffe4b1);
 }
 
@@ -229,6 +237,9 @@ div.full-page {
   border-color: var(--pale-yellow);
 }
 
+h1 {
+  color: var(--pale-yellow) !important;
+}
 p {
   color: var(--blue);
 }
@@ -244,10 +255,14 @@ a:hover {
   background-color:var(--pale-yellow);
 }
 #toggle {
-  color: var(--yellow);
+  color: #ffffff00;
 }
 #toggle .navbar-toggler-icon {
-  background-image: url("./assets/hamburger-light.svg");
+  background-image: url("./assets/hamburger.svg");
+  filter: invert(61%) sepia(56%) saturate(7388%) hue-rotate(302deg) brightness(86%) contrast(88%); /*var(--pink)*/
+}
+#toggle:hover .navbar-toggler-icon {
+  filter: invert(87%) sepia(90%) saturate(2433%) hue-rotate(306deg) brightness(103%) contrast(88%); /*var(--yellow)*/
 }
 #offcanvas {
   background-color: var(--pale-yellow);
@@ -255,21 +270,20 @@ a:hover {
 
 /* HOME PAGE */
 #landing h1 {
-  color: #25315a;
   background-color: #ffffff32;
   outline-color: var(--pale-yellow);
 }
 #landing h2 {
-  color: #25315a83;
+  color: #25315a9d;
 }
 #landing p {
   color: #25315a83;
 }
 #landing a {
-  color: #5c67a0 !important;
+  color: #4365b5 !important;
 }
 #landing a:hover {
-  color: #fffdf0 !important;
+  color: var(--pale-yellow) !important;
 }
 /* about section -------------------------------- */
 #about {
@@ -280,7 +294,7 @@ a:hover {
 }
 .card.lang {
   color: var(--pale-yellow);
-  background-color: #be01ae3e; /*rgba(238, 141, 255, 0.178)*/
+  background-color: #be01ae3e; 
   outline-color: var(--pale-yellow);
 }
 .card.lang p {
@@ -288,18 +302,14 @@ a:hover {
 }
 
 /* PROJECTS/RESEARCH */
-h1 {
-  color: var(--pale-yellow) !important;
-}
 div.project {
-  /*background-image: linear-gradient(#fffbe9db, #ffffff3d, #fffbe9db);*/
   background-color: #fffbe989;
 }
 div.project .card-title {
-  color: rgb(198, 0, 115) !important;
+  color: var(--darker-pink) !important;
 }
 div.project .card-subtitle {
-  color: rgb(198, 0, 115) !important;
+  color: var(--darker-pink) !important;
 }
 
 #larynx img {
@@ -309,10 +319,8 @@ div.project .card-subtitle {
 
 
 /* DARK MODES --------------------------*/
-.dark-mode {
-  /*background-image: linear-gradient(#000918, #111643, #452670, #560b5a) !important;*/
-  /*background-image: linear-gradient(#131220, #0c0935, #0c2046, #281554, #43134d) !important;*/
-  background-image: linear-gradient(#474129, #000108, #00031A, #040323, #10002C, #1F0127) !important;
+.dark-mode #root {
+  background-image: linear-gradient(#000108, #00031A, #040323, #10002C, #1F0127) !important;
 }
 .dark-mode div.full-page {
   border-image-slice: 1;
@@ -320,80 +328,88 @@ div.project .card-subtitle {
 }
 
 .dark-mode p {
-  color: #fff8eb;
+  color: var(--dm-white);
 }
 .dark-mode a {
-  color: rgb(202, 200, 225) !important;
+  color: var(--dm-yellow) !important;
 }
 .dark-mode a:hover {
-  color: #ffeec9 !important;
+  color: var(--dm-pale-yellow) !important;
+  text-shadow: 0px 0px 5px #ffffff7f;
 }
 
 .dark-mode #portfolio-navbar {
-  background-color: #fff0d0; /*#fff0d0 #0b1122*/
+  background-color: var(--dm-pale-yellow);
 }
 .dark-mode #portfolio-navbar a {
-  color: #1f1466 !important; /*#1f1466*/
+  color: var(--dm-navy) !important; 
 }
 .dark-mode #portfolio-navbar a:hover {
   color: var(--dm-yellow) !important;
 }
 .dark-mode #toggle {
   border-width: 0;
-  color: #DB4D9C;
+  
 }
 .dark-mode #toggle .navbar-toggler-icon {
-  background-image: url("./assets/hamburger-dark.svg");
+  filter: invert(11%) sepia(49%) saturate(5101%) hue-rotate(245deg) brightness(78%) contrast(104%); /*var(--dm-navy)*/
+}
+.dark-mode #toggle:hover .navbar-toggler-icon {
+  filter: invert(75%) sepia(89%) saturate(361%) hue-rotate(352deg) brightness(94%) contrast(99%); /*var(--dm-yellow)*/
+}
+.dark-mode #offcanvas {
+  background-color: #040323;
 }
 
 
 .dark-mode #landing h1 {
-  color: #ffeec9 ; /*#fff0d0*/
+  color: var(--dm-pale-yellow) !important;
   background-color: #000000a9; 
-  outline: 3px solid #fff0d033; /*#fff0d033*/
+  outline: 3px solid #fff0d033; 
+  text-shadow: 0px 0px 10px #ffffffb0;
 }
 .dark-mode #landing h2 {
-  color: #ffe991ea; /*#FFE991*/
+  color: #ffe991ea; 
 }
 .dark-mode #landing p {
-  color: #ffe991cb; /*#FFE991*/
+  color: #ffe991cb; 
 }
 .dark-mode #landing a {
-  color: var(--dm-yellow) !important; /*var(--dm-yellow)*/
+  color: var(--dm-yellow) !important; 
 }
 .dark-mode #landing a:hover {
-  color: #1d2a5e !important;
+  color: var(--dm-pale-yellow) !important;
 }
 
 .dark-mode #about {
-  --about-text: #ffffffd5; /*#ffffffd5*/
-  color: var(--about-text);
+  color: var(--dm-white);
 }
 .dark-mode #about p {
-  color: var(--about-text);
+  color: var(--dm-white);
 }
 .dark-mode .card.lang {
   border: .5rem solid #1b104e;
   outline: 0;
-  background-color: #00000000; /*#0e0545bf #00051779*/
-  color: var(--about-text);
+  background-color: #00000000;
+  color: var(--dm-white);
 }
 .dark-mode .card.lang p {
-  color: var(--about-text) !important;
+  color: var(--dm-white) !important;
 }
 
-.dark-mode h1 {
-  color: #ffeec9 !important;
+.dark-mode div.non-home h1 {
+  color: #fff0d064 !important;
 }
 .dark-mode div.project {
-  /*background-image: linear-gradient(#fffbe9db, #ffffff3d, #fffbe9db);*/
-  background-color: #10144989;
+  background-color: #090c4089;
 }
 .dark-mode div.project .card-title {
-  color: rgb(202, 200, 225) !important;
+  color: var(--dm-pale-yellow) !important; 
+  text-shadow: 0px 0px 5px #ffffff7f;
 }
 .dark-mode div.project .card-subtitle {
-  color: rgb(202, 200, 225) !important;
+  color: var(--dm-pale-yellow) !important;
+  text-shadow: 0px 0px 5px #ffffff7f;
 }
 
 .dark-mode #larynx img {

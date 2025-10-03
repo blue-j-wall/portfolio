@@ -1,8 +1,7 @@
-import { useEffect, useState, useContext } from 'react'
-import { Container, Nav, Navbar, Button, ButtonGroup, Image, ListGroup, Offcanvas } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { Container, Nav, Navbar, ListGroup, Offcanvas } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
-import { GiTreeBranch } from "react-icons/gi";
 import { HashLink } from 'react-router-hash-link';
 
 export default function SiteNavbar(props) {
@@ -10,7 +9,7 @@ export default function SiteNavbar(props) {
     const [colorMode, setColorMode] = useState();
     const handleColorMode = () => {
 
-        var element = document.getElementById("root");
+        let element = document.getElementsByTagName("html")[0];
 
         if(colorMode == "dark") {
             element.classList.remove("dark-mode");
@@ -26,7 +25,7 @@ export default function SiteNavbar(props) {
 
     useEffect(() => { // retrieve color theme from storage
         let storedTheme = localStorage.getItem('theme');
-        var element = document.getElementById("root");
+        let element = document.getElementsByTagName("html")[0];
         
         if(!storedTheme) {
             localStorage.setItem('theme', "light");
