@@ -66,16 +66,19 @@ export default function SiteNavbar(props) {
                         <Nav.Link as={HashLink} smooth to='/home#about' style={{textDecoration:"none"}} onClick={handleCloseOffcanvas}>About</Nav.Link>
                         <Nav.Link as={Link} to="/projects" onClick={handleCloseOffcanvas}>Projects</Nav.Link>
                         <Nav.Link as={Link} to="/research" onClick={handleCloseOffcanvas}>Research</Nav.Link>
-                        {/*<Nav.Link as={Link} to="https://www.linkedin.com/" target="_blank"><FaLinkedin/></Nav.Link>
-                        <Nav.Link as={Link} to="https://github.com/G-Wall" target="_blank"><FaGithub/></Nav.Link>
-                        <Nav.Link as={Link} to="mailto:jamiewall247@gmail.com" target="_blank"><FaEnvelope/></Nav.Link>*/}
                     </Nav>
 
                     <Nav className="d-flex justify-content-end">
                         <ListGroup id="icons" className="d-flex justify-content-start" horizontal>
-                            <ListGroup.Item ><a href="https://www.linkedin.com/in/jamie-wall-02007b382" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin/></a></ListGroup.Item>
-                            <ListGroup.Item ><a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub/></a></ListGroup.Item>
-                            <ListGroup.Item ><a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope/></a></ListGroup.Item>
+                            <ListGroup.Item aria-hidden="true">
+                                <a href="https://www.linkedin.com/in/jamie-wall-02007b382" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin aria-label="linkedin"/></a>
+                            </ListGroup.Item>
+                            <ListGroup.Item aria-hidden="true">
+                                <a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub aria-label="github"/></a>
+                            </ListGroup.Item>
+                            <ListGroup.Item aria-hidden="true">
+                                <a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope aria-label="email"/></a>
+                            </ListGroup.Item>
                         </ListGroup>
                     </Nav>
 
@@ -83,8 +86,8 @@ export default function SiteNavbar(props) {
             </Navbar.Offcanvas>
             
             <Navbar.Text>
-                <a onClick={handleColorMode} id="color-toggle" className="d-flex align-items-center">
-                    {colorMode=="light" ? <FaSun/> : <FaMoon/>}
+                <a onClick={handleColorMode} id="color-toggle" className="d-flex align-items-center" tabIndex="0">
+                    {colorMode=="light" ? <FaSun aria-label="light mode"/> : <FaMoon aria-label="dark mode"/>}
                 </a>
             </Navbar.Text>
             

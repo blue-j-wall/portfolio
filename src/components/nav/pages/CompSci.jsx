@@ -7,10 +7,9 @@ export default function CompSci(props) {
 
         <Card className="project">
             <Card.Body>
-
                 <div className="body-text">
-                    <Card.Title>The Library</Card.Title>
-                    <Card.Subtitle>media archive website | personal project (ongoing)</Card.Subtitle>
+                    <h2><Card.Title>The Library</Card.Title></h2>
+                    <h3><Card.Subtitle>media archive website | personal project (ongoing)</Card.Subtitle></h3>
                 </div>
 
                 <div className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-start">
@@ -35,8 +34,8 @@ export default function CompSci(props) {
         <Card className="project">
             <Card.Body className="d-flex flex-column ">
                 <div className="body-text">
-                    <Card.Title>Lingua</Card.Title>
-                    <Card.Subtitle>study app | final project for android development class (Fall 2025)</Card.Subtitle>
+                    <h2><Card.Title>Lingua</Card.Title></h2>
+                    <h3><Card.Subtitle>study app | final project for android development class (Fall 2025)</Card.Subtitle></h3>
                 </div>
 
                 <div className="body-text">

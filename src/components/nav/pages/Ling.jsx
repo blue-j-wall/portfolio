@@ -15,7 +15,7 @@ export default function Ling(props) {
                 </div>
                 
                 <div className="body-text">
-                    <Card.Title>Emojis</Card.Title>
+                    <h2><Card.Title>Emojis</Card.Title></h2>
                     <Card.Text>This is an independent research project on ‘internet speech’. It covers how people use and perceive <strong>emojis/emoticons in texting and social media</strong>, and how that varies based on age.</Card.Text>
                     <Card.Text>It began when I noticed people—including myself—get annoyed when messaging apps autocorrect emoticons :) to emojis 🙂, and that my peers described their parents’ unironic, positive usage of smiley emojis as “threatening, unsettling, passive aggressive,” though unintentionally so.</Card.Text>
                     <Card.Text>This meant there must be an appreciable difference in perception, therefore:<br/><strong>Do digital natives see smiley emojis as less positive and emoticons as more positive?</strong></Card.Text>
@@ -29,7 +29,7 @@ export default function Ling(props) {
         <Card className="project">
             <Card.Body className="d-flex flex-row flex-xl-nowrap flex-wrap justify-content-center align-items-center">
                 <div className="body-text">
-                    <Card.Title>Phonetics</Card.Title>
+                    <h2><Card.Title>Phonetics</Card.Title></h2>
                     <Card.Text>In this pilot literature synthesis paper, I investigated <strong>differences in pronunciation between genders across the world’s languages.</strong></Card.Text>
                     <Card.Text>It was written for my capstone course in linguistics with Prof. Joe Salmons that covered laryngeal realism (LR), a phonological theory. The original goal was to find new evidence for the theory—specifically sociolinguistic evidence, as the subfield hadn’t been covered much in class.</Card.Text>
                     <Card.Text>I focused on voice onset time, a phonetic feature important in LR, as my cross-linguistic gendered variable. There was no existing research on this, so I started from scratch by <strong>collecting 26 papers on 19 languages</strong> which contained relevant raw data.</Card.Text>
