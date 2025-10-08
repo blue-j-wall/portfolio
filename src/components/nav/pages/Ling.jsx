@@ -34,7 +34,7 @@ export default function Ling(props) {
                     <Card.Text>It was written for my capstone course in linguistics with Prof. Joe Salmons that covered laryngeal realism (LR), a phonological theory. The original goal was to find new evidence for the theory—specifically sociolinguistic evidence, as the subfield hadn’t been covered much in class.</Card.Text>
                     <Card.Text>I focused on voice onset time, a phonetic feature important in LR, as my cross-linguistic gendered variable. There was no existing research on this, so I started from scratch by <strong>collecting 26 papers on 19 languages</strong> which contained relevant raw data.</Card.Text>
                     <Card.Text>I then analyzed these language-specific results through the lens of LR to find consistent phonological or phonetic patterns. Though the findings didn’t support or contradict the theory since the pattern was completely phonetic, I did get novel results on where gendered pronunciation differences occur. They tended to arise at the longest possible voice onset times.</Card.Text>
-                    <Card.Text><br/>The full paper is available here (link paper)</Card.Text>
+                    <Card.Text><br/>The full paper is available <a href="https://docspace-9fcc69.onlyoffice.com/s/Kr2bLcPv95tBCDR" target="_blank">here</a>.</Card.Text>
                 </div>
                 
                 <div id="larynx" className="d-flex justify-content-end">

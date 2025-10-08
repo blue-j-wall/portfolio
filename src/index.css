@@ -53,6 +53,9 @@ a {
   padding-left: 2rem; /*1rem by default*/
   padding-right: 2rem; /*1rem by default*/
 }
+.navbar-brand img {
+  padding: 2px;
+}
 #toggle {
   border-width: 0;
 }
@@ -167,7 +170,7 @@ div.project .card-title {
   font-family: bebasFont;
 }
 div.project .card-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: bebasFont;
 }
 div.project .body-text {
@@ -215,9 +218,8 @@ div.project .body-text {
 
 /* COLORS ---------------------------------------------------------------------------- */
 :root { /*<html>*/
-  --blue: #0085d2;
-  --pink: #d14190; 
-  --darker-pink: rgb(198, 0, 115);
+  --blue: #0079c0; /*#0085d2*/
+  --pink: #cc2285;
   --yellow: #F0BD75;
   --pale-yellow: #FFFDD0;
 
@@ -253,6 +255,9 @@ a:hover {
 /* NAVBAR */
 #portfolio-navbar{
   background-color:var(--pale-yellow);
+}
+.navbar-brand img:hover {
+  background-color: var(--yellow);
 }
 #toggle {
   color: #ffffff00;
@@ -303,13 +308,13 @@ a:hover {
 
 /* PROJECTS/RESEARCH */
 div.project {
-  background-color: #fffbe989;
+  background-color: #fffaf288;
 }
 div.project .card-title {
-  color: var(--darker-pink) !important;
+  color: var(--pink) !important;
 }
 div.project .card-subtitle {
-  color: var(--darker-pink) !important;
+  color: var(--pink) !important;
 }
 
 #larynx img {
@@ -346,6 +351,9 @@ div.project .card-subtitle {
 }
 .dark-mode #portfolio-navbar a:hover {
   color: var(--dm-yellow) !important;
+}
+.dark-mode .navbar-brand img:hover {
+  background-color: var(--dm-yellow);
 }
 .dark-mode #toggle {
   border-width: 0;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Container, Nav, Navbar, ListGroup, Offcanvas } from "react-bootstrap";
+import { Container, Nav, Navbar, ListGroup, Offcanvas, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
 import { HashLink } from 'react-router-hash-link';
@@ -47,11 +47,12 @@ export default function SiteNavbar(props) {
     return <Navbar id="portfolio-navbar" fixed="top" expand="md" collapseOnSelect>
         <Container id="nav-container" >
             <Navbar.Brand smooth as={HashLink} to="/home#">
-                <img
-                    alt="crow emoji"
-                    src="https://em-content.zobj.net/source/microsoft/407/black-bird_1f426-200d-2b1b.png"
-                    width="30"
-                    height="30"
+                <Image
+                    rounded
+                    alt="bluejay icon"
+                    src="src\assets\bluejay small.png"
+                    width="33"
+                    height="33"
                     className="d-inline-block align-top"
                 />{' '}
             </Navbar.Brand>
@@ -74,7 +75,7 @@ export default function SiteNavbar(props) {
                                 <a href="https://www.linkedin.com/in/jamie-wall-02007b382" target="_blank" onClick={handleCloseOffcanvas}><FaLinkedin aria-label="linkedin"/></a>
                             </ListGroup.Item>
                             <ListGroup.Item aria-hidden="true">
-                                <a href="https://github.com/G-Wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub aria-label="github"/></a>
+                                <a href="https://github.com/blue-j-wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub aria-label="github"/></a>
                             </ListGroup.Item>
                             <ListGroup.Item aria-hidden="true">
                                 <a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope aria-label="email"/></a>
