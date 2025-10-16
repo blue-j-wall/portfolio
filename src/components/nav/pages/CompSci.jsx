@@ -40,7 +40,7 @@ export default function CompSci(props) {
 
                 <div className="body-text">
                     <Card.Text> Most low-level linguistics courses require memorization and understanding of complicated concepts such as syntax trees and the IPA chart. 
-                        However, many students find difficult to practice on their own, which I knew from personal experience.</Card.Text>
+                        However, many students find it difficult to practice on their own, which I knew from personal experience.</Card.Text>
                     <Card.Text> I participated in a <strong>team of four to develop an app</strong> that addresses this problem; it offers quizzes and interactive activites that help 
                         linguistics students master introductory material. </Card.Text>
                 </div>
@@ -57,7 +57,7 @@ export default function CompSci(props) {
                         like <a href="https://universaldependencies.org/#english-treebanks" target="_blank">treebanks</a> (shown above) 
                         and <a href="https://github.com/CUNY-CL/wikipron/tree/master" target="_blank">WikiPron</a>
                         , I did the <strong>data wrangling and programming for the dataloader</strong>. I worked 
-                        closely with my teammate tasked with the quizzes themselves to integrate our code.</Card.Text>
+                        closely with my teammate who was tasked with the quizzes themselves to integrate our code.</Card.Text>
                     <Card.Text> Other features of the app include Firebase authentication, drag & drop actions, vibration feedback, and notifications.</Card.Text>
                     <Card.Text>A demo can be viewed <a href="https://youtu.be/PJXH08NXyqY" target="_blank">here</a>.</Card.Text>
                 </div>

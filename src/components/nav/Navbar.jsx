@@ -78,7 +78,7 @@ export default function SiteNavbar(props) {
                                 <a href="https://github.com/blue-j-wall" target="_blank" onClick={handleCloseOffcanvas}><FaGithub aria-label="github"/></a>
                             </ListGroup.Item>
                             <ListGroup.Item aria-hidden="true">
-                                <a href="mailto:jamiewall247@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope aria-label="email"/></a>
+                                <a href="mailto:jamiewall.dev@gmail.com" target="_blank" onClick={handleCloseOffcanvas}><FaEnvelope aria-label="email"/></a>
                             </ListGroup.Item>
                         </ListGroup>
                     </Nav>
