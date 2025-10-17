@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Container, Nav, Navbar, ListGroup, Offcanvas, Image } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
-import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
 import { HashLink } from 'react-router-hash-link';
+
+import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
 
 export default function SiteNavbar(props) {
 
