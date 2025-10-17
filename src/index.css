@@ -112,6 +112,14 @@ a {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-family: alteHaasGroteskRegularFont;
 }
+#landing a {
+  padding: .5rem;
+  padding-top: .2rem;
+  padding-bottom: .3rem;
+  border-radius: 1rem;
+  outline-width: 2px;
+  outline-style: solid;
+}
 /* about section */
 #about {
   margin-left: 5vw;
