@@ -52,7 +52,7 @@ export default function SiteNavbar(props) {
                 <Image
                     rounded
                     alt="bluejay icon"
-                    src="\assets\bluejay small.png"
+                    src="/assets/bluejay small.png"
                     width="33"
                     height="33"
                     className="d-inline-block align-top"

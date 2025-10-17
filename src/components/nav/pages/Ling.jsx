@@ -9,9 +9,9 @@ export default function Ling(props) {
             <Card.Body className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-center">
 
                 <div id="emoji-group" className="d-flex flex-row flex-md-wrap flex-nowrap">
-                    <Image alt="slightly smiling face emoji" src="\assets\projects-media\slight smiley.png"/>
-                    <Image alt="smiling face with smiling eyes emoji" src="\assets\projects-media\closed eyes smiley.png"/>
-                    <Image alt="grinning face with smiling eyes emoji" src="\assets\projects-media\grinning smiley.png"/>
+                    <Image alt="slightly smiling face emoji" src="/assets/projects-media/slight smiley.png"/>
+                    <Image alt="smiling face with smiling eyes emoji" src="/assets/projects-media/closed eyes smiley.png"/>
+                    <Image alt="grinning face with smiling eyes emoji" src="/assets/projects-media/grinning smiley.png"/>
                 </div>
                 
                 <div className="body-text">
@@ -39,7 +39,7 @@ export default function Ling(props) {
                 
                 <div id="larynx" className="d-flex justify-content-end">
                     <Figure>
-                        <Figure.Image alt="larynx diagram" src="\assets\projects-media\larynx wikipedia.png"/>
+                        <Figure.Image alt="larynx diagram" src="/assets/projects-media/larynx wikipedia.png"/>
                         <Figure.Caption><a href="https://en.wikipedia.org/wiki/Larynx" target="_blank">Fig 1. The Larynx</a></Figure.Caption>
                     </Figure>
                 </div>

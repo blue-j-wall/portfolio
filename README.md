@@ -1,7 +1,5 @@
 # Portfolio Info
-## To see the website...
-Since the website was built with Vite, to see it locally in dev mode, execute `npm install` then `npm run dev` in the project directory. After, to see the production version, run `npm run preview`.
-
+This website was built with Vite, React, and React Bootstrap.
 ## Credit
 ### Icons
 - Bluejay - own work
