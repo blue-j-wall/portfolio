@@ -1,6 +1,6 @@
 # Portfolio Info
 ## To see the website...
-To see the website locally in dev mode, execute `npm install` then `npm run dev` in the project directory.
+Since the website was built with Vite, to see it locally in dev mode, execute `npm install` then `npm run dev` in the project directory. After, to see the production version, run `npm run preview`.
 
 ## Credit
 ### Icons

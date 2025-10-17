@@ -1,21 +1,21 @@
 @font-face {
   font-family: basillionFont;
-  src: url('./assets/fonts/basillion/Basillion.otf'),
-       url('./assets/fonts/basillion/Basillion.woff'),
-       url('./assets/fonts/basillion/Basillion.ttf'); 
+  src: url('/assets/fonts/basillion/Basillion.otf'),
+       url('/assets/fonts/basillion/Basillion.woff'),
+       url('/assets/fonts/basillion/Basillion.ttf'); 
 }
 @font-face {
   font-family: alteHaasGroteskRegularFont;
-  src: url('./assets/fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf');
+  src: url('/assets/fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf');
 }
 @font-face {
   font-family: alteHaasGroteskBoldFont;
-  src: url('./assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf');
+  src: url('/assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf');
 }
 @font-face {
   font-family: bebasFont;
-  src: url('./assets/fonts/bebas/Bebas-Regular.otf'),
-       url('./assets/fonts/bebas/Bebas-Regular.ttf'); 
+  src: url('/assets/fonts/bebas/Bebas-Regular.otf'),
+       url('/assets/fonts/bebas/Bebas-Regular.ttf'); 
 }
 
 :root { /*<html>*/
@@ -271,7 +271,7 @@ a:hover {
   color: #ffffff00;
 }
 #toggle .navbar-toggler-icon {
-  background-image: url("./assets/hamburger.svg");
+  background-image: url("/assets/hamburger.svg");
   filter: invert(61%) sepia(56%) saturate(7388%) hue-rotate(302deg) brightness(86%) contrast(88%); /*var(--pink)*/
 }
 #toggle:hover .navbar-toggler-icon {
