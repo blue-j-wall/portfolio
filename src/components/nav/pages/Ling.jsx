@@ -1,5 +1,10 @@
 import { Image, Card, Figure } from 'react-bootstrap'
 
+import emoji1 from "/assets/projects-media/slight smiley.png";
+import emoji2 from "/assets/projects-media/closed eyes smiley.png";
+import emoji3 from "/assets/projects-media/grinning smiley.png";
+import larynx from "/assets/projects-media/larynx wikipedia.png";
+
 export default function Ling(props) {
 
     return <div className="full-page non-home">
@@ -9,9 +14,9 @@ export default function Ling(props) {
             <Card.Body className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-center">
 
                 <div id="emoji-group" className="d-flex flex-row flex-md-wrap flex-nowrap">
-                    <Image alt="slightly smiling face emoji" src="/assets/projects-media/slight smiley.png"/>
-                    <Image alt="smiling face with smiling eyes emoji" src="/assets/projects-media/closed eyes smiley.png"/>
-                    <Image alt="grinning face with smiling eyes emoji" src="/assets/projects-media/grinning smiley.png"/>
+                    <Image alt="slightly smiling face emoji" src={emoji1}/>
+                    <Image alt="smiling face with smiling eyes emoji" src={emoji2}/>
+                    <Image alt="grinning face with smiling eyes emoji" src={emoji3}/>
                 </div>
                 
                 <div className="body-text">
@@ -39,7 +44,7 @@ export default function Ling(props) {
                 
                 <div id="larynx" className="d-flex justify-content-end">
                     <Figure>
-                        <Figure.Image alt="larynx diagram" src="/assets/projects-media/larynx wikipedia.png"/>
+                        <Figure.Image alt="larynx diagram" src={larynx}/>
                         <Figure.Caption><a href="https://en.wikipedia.org/wiki/Larynx" target="_blank">Fig 1. The Larynx</a></Figure.Caption>
                     </Figure>
                 </div>

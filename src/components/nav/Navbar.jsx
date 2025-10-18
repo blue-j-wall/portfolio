@@ -6,6 +6,8 @@ import { HashLink } from 'react-router-hash-link';
 
 import { FaGithub, FaEnvelope, FaLinkedin, FaSun, FaMoon } from "react-icons/fa6";
 
+import bluejay from "/assets/bluejay small.png";
+
 export default function SiteNavbar(props) {
 
     const [colorMode, setColorMode] = useState();
@@ -52,7 +54,7 @@ export default function SiteNavbar(props) {
                 <Image
                     rounded
                     alt="bluejay icon"
-                    src="/assets/bluejay small.png"
+                    src={bluejay}
                     width="33"
                     height="33"
                     className="d-inline-block align-top"

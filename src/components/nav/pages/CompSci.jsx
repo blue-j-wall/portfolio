@@ -1,5 +1,10 @@
 import { Image, Card } from 'react-bootstrap'
 
+import library1 from "/assets/projects-media/library home.png";
+import library2 from "/assets/projects-media/library movies.png";
+import lingua from "/assets/projects-media/lingua screenshots.png";
+import treebank from "/assets/projects-media/gum treebank example.jpg";
+
 export default function CompSci(props) {
 
     return <div className="full-page non-home">
@@ -14,8 +19,8 @@ export default function CompSci(props) {
 
                 <div className="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center align-items-start">
                     <div id="library-img-group" className="d-flex flex-column justify-content-center">
-                        <Image rounded alt="home page" src="/assets/projects-media/library home.png"/>
-                        <Image rounded alt="movie entries in card layout" src="/assets/projects-media/library movies.png"/>
+                        <Image rounded alt="home page" src={library1}/>
+                        <Image rounded alt="movie entries in card layout" src={library2}/>
                     </div>
                     <div className="body-text">
                         <Card.Text>This project was originally conceptualized as a <strong>GUI for my 'media spreadsheets'</strong>. 
@@ -46,8 +51,8 @@ export default function CompSci(props) {
                 </div>
 
                 <div id="lingua-img-group" className="d-flex flex-row flex-xl-nowrap flex-wrap justify-content-center align-items-center">
-                    <Image rounded alt="login, syntax quiz, and settings pages" src="/assets/projects-media/lingua screenshots.png"/>
-                    <Image rounded alt="example from GUM treebank" src="/assets/projects-media/gum treebank example.jpg"/>
+                    <Image rounded alt="login, syntax quiz, and settings pages" src={lingua}/>
+                    <Image rounded alt="example from GUM treebank" src={treebank}/>
                 </div>
 
                 <div className="body-text">
